@@ -112,6 +112,9 @@ server = "SERVERIS"
 offline = "OFFLINE"
 players = "ONLINE"
 
+[js.landing.gameRunning]
+stopButton = "STABDYTI"
+
 [js.landing.playerStats]
 unavailable = "Statistika šiuo metu nepasiekiama"
 

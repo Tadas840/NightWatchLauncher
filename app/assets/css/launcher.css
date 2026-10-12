@@ -4113,3 +4113,13 @@ input:checked + .toggleSwitchSlider:before {
 .rotating {
     animation: rotating 10s linear infinite;
 }
+
+/* The launch button while the game is running (STABDYTI). */
+#launch_button[running] {
+    border-color: rgba(255, 110, 110, 0.75);
+}
+#launch_button[running]:hover,
+#launch_button[running]:focus {
+    border-color: #ff6e6e;
+    box-shadow: 0px 0px 14px rgba(255, 110, 110, 0.6);
+}

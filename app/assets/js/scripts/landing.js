@@ -100,8 +100,25 @@ function setLaunchEnabled(val){
     document.getElementById('launch_button').disabled = !val
 }
 
+/**
+ * Switch the launch button between ŽAISTI and STABDYTI (shown while the game is running).
+ *
+ * @param {boolean} running True if the game is running.
+ */
+function setGameRunning(running){
+    const button = document.getElementById('launch_button')
+    button.innerHTML = running ? Lang.queryJS('landing.gameRunning.stopButton') : Lang.queryEJS('landing.launchButton')
+    button.toggleAttribute('running', running)
+}
+
 // Bind launch button
 document.getElementById('launch_button').addEventListener('click', async e => {
+    if(proc != null){
+        // The game is running, the button is STABDYTI.
+        loggerLanding.info('Stopping the game..')
+        proc.kill()
+        return
+    }
     loggerLanding.info('Launching game..')
     try {
         const server = (await DistroAPI.getDistribution()).getServerById(ConfigManager.getSelectedServer())
@@ -588,6 +605,11 @@ async function dlAsync(login = true) {
 
         const onLoadComplete = () => {
             toggleLaunchArea(false)
+            if(proc == null){
+                // The game already closed.
+                return
+            }
+            setGameRunning(true)
             if(hasRPC){
                 DiscordWrapper.updateDetails(Lang.queryJS('landing.discord.loading'))
                 proc.stdout.on('data', gameStateChange)
@@ -633,6 +655,11 @@ async function dlAsync(login = true) {
         try {
             // Build Minecraft process.
             proc = pb.build()
+            proc.on('close', () => {
+                proc = null
+                setGameRunning(false)
+                toggleLaunchArea(false)
+            })
 
             // Bind listeners to stdout.
             proc.stdout.on('data', tempListener)
