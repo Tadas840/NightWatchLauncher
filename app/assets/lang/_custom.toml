@@ -2,6 +2,7 @@
 # NightWatch launcher texts. Edit this file to change the launcher name, links and welcome screen.
 
 [ejs.app]
+loadingText = "Kraunama"
 title = "NightWatch"
 
 [ejs.landing]

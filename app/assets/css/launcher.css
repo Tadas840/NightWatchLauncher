@@ -4085,18 +4085,41 @@ input:checked + .toggleSwitchSlider:before {
     justify-content: center;
 }
 
-/* Stationary image for the spinner. */
+/* NightWatch logo on the loading screen. */
 #loadCenterImage {
-    position: absolute;
-    width: 277px;
+    width: 420px;
     height: auto;
+    filter: drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.8));
+    user-select: none;
+    animation: loadingPulse 2.4s ease-in-out infinite;
 }
 
-/* Rotating image for the spinner. */
-#loadSpinnerImage {
-    width: 280px;
-    height: auto;
-    z-index: 400;
+/* "Kraunama" text under the logo, with animated dots. */
+#loadingText {
+    margin-top: 18px;
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 1), 0px 0px 16px rgba(0, 0, 0, 0.9);
+}
+#loadingText::after {
+    content: '';
+    display: inline-block;
+    width: 1.5em;
+    text-align: left;
+    animation: loadingDots 1.5s steps(4, end) infinite;
+}
+@keyframes loadingDots {
+    0% { content: ''; }
+    25% { content: '.'; }
+    50% { content: '..'; }
+    75% { content: '...'; }
+}
+@keyframes loadingPulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.03); opacity: 0.85; }
 }
 
 /* Rotating animation for the spinner. */
