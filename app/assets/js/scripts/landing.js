@@ -278,10 +278,17 @@ async function refreshPlayerStats() {
     container.style.display = 'block'
 }
 
-// Refresh the server status and player stats every 30 seconds.
+// Refresh the server status and player stats every 30 seconds,
+// and retry the news if they could not be loaded (e.g. the server was restarting).
 let serverStatusListener = setInterval(() => {
     refreshServerStatus()
     refreshPlayerStats()
+    if(newsArr == null && $('#newsErrorFailed').is(':visible')){
+        $('#newsErrorFailed').fadeOut(250, () => {
+            $('#newsErrorLoading').fadeIn(250)
+            initNews()
+        })
+    }
 }, 30000)
 
 /**
