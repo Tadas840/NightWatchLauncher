@@ -1,0 +1,63 @@
+# NightWatchAPI - player stats for the NightWatch launcher.
+# The launcher requests http://<server ip>:<port>/player/<uuid or name>.
+# After editing, run /nightwatchapi reload (port changes need a restart).
+
+port: 8765
+
+# Serve the API over HTTPS with a self-signed certificate (created on first start).
+# The launcher only trusts this certificate: copy plugins/NightWatchAPI/nightwatch-api.pem
+# to the launcher repository (nightwatch/nightwatch-api.pem) and rebuild the launcher.
+https: true
+
+# ExcellentEconomy SQLite database (relative to the server folder).
+economy-database: plugins/ExcellentEconomy/data.db
+
+# Rows shown in the launcher, in this order.
+# source:
+#   economy:<currency id>   - ExcellentEconomy balance (money, auksiniai, coins, ...)
+#   statistic:<STATISTIC>   - Minecraft statistic (PLAYER_KILLS, MOB_KILLS, DEATHS, PLAY_ONE_MINUTE, ...)
+#   rank                    - LuckPerms primary group
+# decimals: digits after the decimal point for numbers.
+fields:
+  - id: silver
+    label: Sidabriniai
+    source: economy:money
+    decimals: 0
+    icon: "⛁"
+    color: "#C0C8D8"
+  - id: gold
+    label: Auksiniai
+    source: economy:auksiniai
+    decimals: 0
+    icon: "◈"
+    color: "#FFC83D"
+  - id: kills
+    label: Nužudymai
+    source: statistic:PLAYER_KILLS
+    decimals: 0
+    icon: "⚔"
+    color: "#FF6B6B"
+  - id: rank
+    label: Rangas
+    source: rank
+    icon: "★"
+    color: "#7FB8FF"
+
+# Names shown for LuckPerms groups. Groups not listed use their display name or group name.
+rank-names:
+  default: Žaidėjas
+
+# Launcher login with the AuthMe account (username + password).
+auth:
+  enabled: true
+  # Allow creating an AuthMe account from the launcher.
+  allow-register: true
+  # How long a launcher login stays valid.
+  session-days: 30
+  # Failed logins allowed per IP address within 10 minutes.
+  max-failed-attempts: 5
+  # Accounts that can be created per IP address within an hour.
+  # AuthMe's maxRegPerIp (accounts per IP in total) is also checked.
+  max-registrations-per-hour: 3
+  # Log the player in to AuthMe automatically when they join with the NightWatch client.
+  auto-login: true

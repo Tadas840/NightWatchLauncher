@@ -1,0 +1,25 @@
+# NightWatch launcher news. Newest article first.
+# After editing, run /nightwatchapi reload - the launcher shows the change on its next start.
+#
+# title:   article title
+# date:    YYYY-MM-DD HH:MM
+# author:  author name
+# link:    optional link opened when the title is clicked (leave empty for none)
+# content: article text in HTML (<p>, <b>, <i>, <ul><li>, <h3>, <br>, <img src="https://...">)
+
+articles:
+  - title: "Atidarytas naujas pasaulis – Už Sienos!"
+    date: "2026-10-12 12:00"
+    author: "NightWatch"
+    link: ""
+    content: |
+      <h3>Už Sienos laukia nauji nuotykiai</h3>
+      <p>Siena atsivėrė! Nuo šiandien kiekvienas NightWatch žaidėjas gali keliauti į naują pasaulį – <b>Už Sienos</b>.</p>
+      <p>Už ledinių sienų tavęs laukia:</p>
+      <ul>
+        <li>naujos, dar niekieno neištyrinėtos žemės,</li>
+        <li>pavojingesni priešai ir vertingesnis grobis,</li>
+        <li>nauji užduočių ir nuotykių siužetai, kurie atsirakina keliaujant vis toliau.</li>
+      </ul>
+      <p>Pasiruošk gerai – šaltis ir tamsa ten negailestingi. Imk šiltus drabužius, maisto ir draugų.</p>
+      <p><i>Naktis renkasi, o mano sargyba prasideda.</i></p>

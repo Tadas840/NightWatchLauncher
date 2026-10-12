@@ -1,0 +1,357 @@
+# Lietuvių kalba. Įkeliama po en_US.toml, todėl čia neišversti tekstai lieka angliški.
+# NightWatch specifiniai tekstai yra _custom.toml faile.
+
+[ejs.landing]
+updateAvailableTooltip = "Yra atnaujinimas"
+usernamePlaceholder = "Vartotojas"
+usernameEditButton = "Keisti"
+settingsTooltip = "Nustatymai"
+serverStatus = "SERVERIS"
+serverStatusPlaceholder = "OFFLINE"
+mojangStatus = "MOJANG STATUSAS"
+mojangStatusTooltipTitle = "Paslaugos"
+mojangStatusNETitle = "Nebūtinos"
+newsButton = "NAUJIENOS"
+launchButton = "ŽAISTI"
+launchButtonPlaceholder = "&#8226; Serveris nepasirinktas"
+launchDetails = "Palaukite.."
+newsNavigationStatus = "{currentPage} iš {totalPages}"
+newsErrorLoadSpan = "Ieškoma naujienų.."
+newsErrorFailedSpan = "Nepavyko įkelti naujienų"
+newsErrorRetryButton = "Bandyti dar kartą"
+newsErrorNoneSpan = "Naujienų nėra"
+
+[ejs.login]
+loginCancelText = "Atšaukti"
+loginSubheader = "PRISIJUNGIMAS"
+loginEmailError = "* Netinkama reikšmė"
+loginEmailPlaceholder = "VARTOTOJO VARDAS"
+loginPasswordError = "* Privaloma"
+loginPasswordPlaceholder = "SLAPTAŽODIS"
+loginPasswordRepeatError = "* Slaptažodžiai nesutampa"
+loginPasswordRepeatPlaceholder = "PAKARTOK SLAPTAŽODĮ"
+loginForgotPasswordText = "pamiršai slaptažodį?"
+loginRememberMeText = "prisiminti mane?"
+loginButtonText = "PRISIJUNGTI"
+loginNeedAccountText = "Neturi paskyros?"
+loginPasswordDisclaimer1 = "Slaptažodis siunčiamas tiesiai į serverį ir niekur nesaugomas."
+loginOfflineDisclaimer = "Minecraft paskyros nereikia."
+loginPasswordDisclaimer2 = "{appName} nėra susijęs su Mojang AB."
+
+[ejs.loginOptions]
+loginOptionsTitle = "Prisijungimo būdai"
+loginWithMicrosoft = "Prisijungti su Microsoft"
+loginWithMojang = "Žaisti be Premium"
+loginButton = "PRISIJUNGTI"
+cancelButton = "Atšaukti"
+
+[ejs.overlay]
+serverSelectHeader = "Galimi serveriai"
+serverSelectConfirm = "Pasirinkti"
+serverSelectCancel = "Atšaukti"
+accountSelectHeader = "Pasirink paskyrą"
+accountSelectConfirm = "Pasirinkti"
+accountSelectCancel = "Atšaukti"
+
+[ejs.settings]
+navHeaderText = "Nustatymai"
+navAccount = "Paskyra"
+navMinecraft = "Minecraft"
+navMods = "Modai"
+navJava = "Java"
+navLauncher = "Launcheris"
+navAbout = "Apie"
+navUpdates = "Atnaujinimai"
+navDone = "Baigti"
+tabAccountHeaderText = "Paskyros nustatymai"
+tabAccountHeaderDesc = "Pridėk naujų paskyrų arba tvarkyk esamas."
+microsoftAccount = "Microsoft"
+addMicrosoftAccount = "+ Pridėti Microsoft paskyrą"
+mojangAccount = "Serverio paskyros"
+addMojangAccount = "+ Pridėti paskyrą"
+minecraftTabHeaderText = "Minecraft nustatymai"
+minecraftTabHeaderDesc = "Žaidimo paleidimo nustatymai."
+gameResolutionTitle = "Žaidimo raiška"
+launchFullscreenTitle = "Paleisti per visą ekraną."
+autoConnectTitle = "Paleidus žaidimą automatiškai prisijungti prie serverio."
+launchDetachedTitle = "Paleisti žaidimą atskirai nuo launcherio."
+launchDetachedDesc = "Jei žaidimas paleistas ne atskirai, uždarius launcherį užsidarys ir žaidimas."
+tabModsHeaderText = "Modų nustatymai"
+tabModsHeaderDesc = "Įjunk arba išjunk modus."
+switchServerButton = "Keisti"
+requiredMods = "Privalomi modai"
+optionalMods = "Pasirenkami modai"
+dropinMods = "Savi modai"
+addMods = "Pridėti modų"
+dropinRefreshNote = "(F5 – atnaujinti)"
+shaderpacks = "Šešėlių paketai (shaders)"
+shaderpackDesc = "Įjunk arba išjunk šešėlių paketus. Jie sklandžiai veikia tik galinguose kompiuteriuose. Čia gali pridėti savų paketų."
+selectShaderpack = "Pasirink šešėlių paketą"
+tabJavaHeaderText = "Java nustatymai"
+tabJavaHeaderDesc = "Java konfigūracija (pažengusiems)."
+memoryTitle = "Atmintis"
+maxRAM = "Daugiausia RAM"
+minRAM = "Mažiausia RAM"
+memoryDesc = "Rekomenduojama mažiausiai 3 GB RAM. Nustačius vienodą mažiausią ir didžiausią reikšmę, žaidimas gali mažiau strigti."
+memoryTotalTitle = "Iš viso"
+memoryAvailableTitle = "Laisva"
+javaExecutableTitle = "Java vykdomasis failas"
+javaExecSelDialogTitle = "Pasirink Java vykdomąjį failą"
+javaExecSelButtonText = "Pasirinkti failą"
+javaExecDesc = "Java failas patikrinamas prieš paleidžiant žaidimą."
+javaPathDesc = "Kelias turi baigtis <strong>{pathSuffix}</strong>."
+jvmOptsTitle = "Papildomi JVM parametrai"
+jvmOptsDesc = "Parametrai, perduodami JVM paleidimo metu. <em>-Xms</em> ir <em>-Xmx</em> čia nerašyk."
+launcherTabHeaderText = "Launcherio nustatymai"
+launcherTabHeaderDesc = "Paties launcherio nustatymai."
+allowPrereleaseTitle = "Leisti bandomuosius atnaujinimus."
+allowPrereleaseDesc = "Bandomosiose versijose yra naujų funkcijų, kurios gali būti ne iki galo išbandytos.<br>Jei naudoji bandomąją versiją, šis nustatymas visada įjungtas."
+dataDirectoryTitle = "Duomenų aplankas"
+selectDataDirectory = "Pasirink duomenų aplanką"
+chooseFolder = "Pasirinkti aplanką"
+dataDirectoryDesc = "Visi žaidimo failai ir Java saugomi duomenų aplanke.<br>Ekrano nuotraukos ir pasauliai saugomi serverio aplanke."
+aboutTabHeaderText = "Apie"
+aboutTabHeaderDesc = "Informacija apie dabartinę versiją ir jos pakeitimai."
+aboutTitle = "{appName}"
+stableRelease = "Stabili versija"
+versionText = "Versija "
+sourceGithub = "Šaltinis (GitHub)"
+support = "Pagalba"
+devToolsConsole = "DevTools konsolė"
+releaseNotes = "Versijos pakeitimai"
+changelog = "Pakeitimų sąrašas"
+noReleaseNotes = "Pakeitimų aprašo nėra"
+viewReleaseNotes = "Žiūrėti pakeitimus GitHub'e"
+launcherUpdatesHeaderText = "Launcherio atnaujinimai"
+launcherUpdatesHeaderDesc = "Parsisiųsk, įdiek ir peržiūrėk launcherio atnaujinimus."
+checkForUpdates = "Tikrinti atnaujinimus"
+whatsNew = "Kas naujo"
+updateReleaseNotes = "Atnaujinimo pakeitimai"
+
+[ejs.waiting]
+waitingText = "Laukiama Microsoft.."
+
+[ejs.welcome]
+continueButton = "TĘSTI"
+
+
+[js.discord]
+waiting = "Laukiama kliento.."
+state = "Serveris: {shortId}"
+
+[js.index]
+microsoftLoginTitle = "Microsoft prisijungimas"
+microsoftLogoutTitle = "Microsoft atsijungimas"
+
+[js.login]
+login = "PRISIJUNGTI"
+loggingIn = "JUNGIAMASI"
+success = "PAVYKO"
+tryAgain = "Bandyti dar kartą"
+
+[js.login.error]
+invalidValue = "* Netinkama reikšmė"
+requiredValue = "* Privaloma"
+
+[js.login.error.unknown]
+title = "Nežinoma prisijungimo klaida"
+desc = "Įvyko nežinoma klaida. Daugiau informacijos konsolėje."
+
+[js.landing.launch]
+pleaseWait = "Palaukite.."
+failureTitle = "Klaida paleidžiant"
+failureText = "Daugiau informacijos konsolėje (CTRL + Shift + i)."
+okay = "Gerai"
+
+[js.landing.selectedAccount]
+noAccountSelected = "Paskyra nepasirinkta"
+
+[js.landing.selectedServer]
+noSelection = "Serveris nepasirinktas"
+loading = "Kraunama.."
+
+[js.landing.serverStatus]
+server = "SERVERIS"
+offline = "OFFLINE"
+players = "ONLINE"
+
+[js.landing.systemScan]
+checking = "Tikrinama sistema.."
+noCompatibleJava = "Nerasta tinkama<br>Java versija"
+installJavaMessage = "Minecraft paleidimui reikia 64 bitų Java {major}. Ar įdiegti ją automatiškai?"
+installJava = "Įdiegti Java"
+installJavaManually = "Įdiegsiu pats"
+javaDownloadPrepare = "Ruošiamasi siųsti Java.."
+javaDownloadFailureTitle = "Klaida siunčiant Java"
+javaDownloadFailureText = "Daugiau informacijos konsolėje (CTRL + Shift + i)."
+javaRequired = "Žaidimui paleisti<br>reikia Java"
+javaRequiredMessage = "Žaidimui paleisti reikia 64 bitų Java {major}.<br><br>Ją gali parsisiųsti iš <a href=\"https://adoptium.net/\">adoptium.net</a>."
+javaRequiredDismiss = "Supratau"
+javaRequiredCancel = "Grįžti"
+
+[js.landing.downloadJava]
+findJdkFailure = "Nepavyko rasti OpenJDK versijos."
+javaDownloadCorruptedError = "Parsiųstas JDK sugadintas (netinka hash)."
+extractingJava = "Išarchyvuojama Java"
+javaInstalled = "Java įdiegta!"
+
+[js.landing.dlAsync]
+loadingServerInfo = "Įkeliama serverio informacija.."
+fatalError = "Kritinė klaida"
+unableToLoadDistributionIndex = "Nepavyko įkelti serverio konfigūracijos. Daugiau informacijos konsolėje (CTRL + Shift + i)."
+pleaseWait = "Palaukite.."
+errorDuringLaunchTitle = "Klaida paleidžiant"
+seeConsoleForDetails = "Daugiau informacijos konsolėje (CTRL + Shift + i)."
+validatingFileIntegrity = "Tikrinami failai.."
+errorDuringFileVerificationTitle = "Klaida tikrinant failus"
+downloadingFiles = "Siunčiami failai.."
+errorDuringFileDownloadTitle = "Klaida siunčiant failus"
+preparingToLaunch = "Ruošiamasi paleisti.."
+launchingGame = "Paleidžiamas žaidimas.."
+launchWrapperNotDownloaded = "Nepavyko parsiųsti pagrindinio failo (LaunchWrapper), todėl žaidimo paleisti negalima.<br><br>Laikinai išjunk antivirusinę programą ir bandyk dar kartą."
+doneEnjoyServer = "Paruošta. Gero žaidimo!"
+checkConsoleForDetails = "Daugiau informacijos konsolėje (CTRL + Shift + i)."
+
+[js.landing.news]
+checking = "Ieškoma naujienų"
+by = "Autorius: {author}"
+
+[js.landing.discord]
+loading = "Kraunamas žaidimas.."
+joining = "Jungiamasi prie NightWatch!"
+joined = "Žaidžia NightWatch!"
+
+[js.overlay]
+dismiss = "Uždaryti"
+
+[js.settings.fileSelectors]
+executables = "Vykdomieji failai"
+allFiles = "Visi failai"
+
+[js.settings.mstfLogin]
+errorTitle = "Kažkas nepavyko"
+errorMessage = "Microsoft prisijungimas nepavyko. Bandyk dar kartą."
+okButton = "Gerai"
+
+[js.settings.mstfLogout]
+errorTitle = "Kažkas nepavyko"
+errorMessage = "Microsoft atsijungimas nepavyko. Bandyk dar kartą."
+okButton = "Gerai"
+
+[js.settings.authAccountSelect]
+selectButton = "Pasirinkti"
+selectedButton = "Pasirinkta &#10004;"
+
+[js.settings.authAccountLogout]
+lastAccountWarningTitle = "Dėmesio<br>Tai paskutinė tavo paskyra"
+lastAccountWarningMessage = "Launcheriu naudotis galima tik prisijungus bent prie vienos paskyros. Atsijungęs turėsi prisijungti iš naujo.<br><br>Ar tikrai nori atsijungti?"
+confirmButton = "Taip, atsijungti"
+cancelButton = "Atšaukti"
+
+[js.settings.authAccountPopulate]
+username = "Vartotojas"
+uuid = "UUID"
+selectAccount = "Pasirinkti"
+selectedAccount = "Pasirinkta ✓"
+logout = "Atsijungti"
+
+[js.settings.dropinMods]
+removeButton = "Pašalinti"
+deleteFailedTitle = "Nepavyko ištrinti<br>modo {fullName}"
+deleteFailedMessage = "Įsitikink, kad failas nenaudojamas, ir bandyk dar kartą."
+failedToggleTitle = "Nepavyko įjungti / išjungti<br>vieno ar kelių modų"
+okButton = "Gerai"
+
+[js.settings.serverListing]
+mainServer = "Pagrindinis serveris"
+
+[js.settings.java]
+selectedJava = "Pasirinkta: Java {version} ({vendor})"
+invalidSelection = "Netinkamas pasirinkimas"
+requiresJava = "Reikia Java {major} x64."
+availableOptions = "Galimos Java {major} versijos (HotSpot VM)"
+
+[js.settings.about]
+preReleaseTitle = "Bandomoji versija"
+stableReleaseTitle = "Stabili versija"
+releaseNotesFailed = "Nepavyko įkelti pakeitimų aprašo."
+
+[js.settings.updates]
+newReleaseTitle = "Yra nauja versija"
+newPreReleaseTitle = "Yra nauja bandomoji versija"
+downloadingButton = "Siunčiama.."
+downloadButton = 'Parsisiųsti<span style="font-size: 10px;color: gray;text-shadow: none !important;">Uždaryk launcherį ir paleisk parsiųstą failą.</span>'
+latestVersionTitle = "Naudoji naujausią versiją"
+checkForUpdatesButton = "Tikrinti atnaujinimus"
+checkingForUpdatesButton = "Tikrinami atnaujinimai.."
+
+[js.settings.msftLogin]
+errorTitle = "Microsoft prisijungimas nepavyko"
+errorMessage = "Nepavyko patvirtinti tavo Microsoft paskyros. Bandyk dar kartą."
+okButton = "Gerai"
+
+[js.uibinder.startup]
+fatalErrorTitle = "Kritinė klaida: nepavyko įkelti serverio konfigūracijos"
+fatalErrorMessage = "Nepavyko įkelti serverio konfigūracijos, o vietinės kopijos nėra.<br><br>Be jos launcheris negali veikti. Patikrink interneto ryšį ir paleisk launcherį iš naujo."
+closeButton = "Uždaryti"
+
+[js.uibinder.validateAccount]
+failedMessageTitle = "Reikia prisijungti"
+failedMessage = "<strong>{account}</strong> prisijungimas nebegalioja. Pasirink kitą paskyrą arba prisijunk iš naujo."
+failedMessageSelectAnotherAccount = "<strong>{account}</strong> prisijungimas nebegalioja. Prisijunk iš naujo."
+loginButton = "Prisijungti"
+selectAnotherAccountButton = "Kita paskyra"
+
+[js.uicore.autoUpdate]
+checkingForUpdateButton = "Tikrinami atnaujinimai..."
+installNowButton = "Atnaujinti dabar"
+laterButton = "Vėliau"
+readyTitle = "Atnaujinimas paruoštas"
+readyMessage = "Atsisiųsta nauja launcherio versija {version}. Launcheris persikraus ir bus atnaujintas.<br><br>Pasirinkus „Vėliau“, atnaujinimas įsidiegs uždarius launcherį."
+checkForUpdatesButton = "Tikrinti atnaujinimus"
+
+[js.auth.microsoft.error]
+noProfileTitle = "Prisijungimo klaida:<br>nėra profilio"
+noProfileDesc = "Tavo Microsoft paskyra dar neturi Minecraft profilio. Susikurk jį <a href=\"https://minecraft.net/\">Minecraft.net</a> svetainėje."
+noXboxAccountTitle = "Prisijungimo klaida:<br>nėra Xbox paskyros"
+noXboxAccountDesc = "Tavo Microsoft paskyra neturi susietos Xbox paskyros."
+xblBannedTitle = "Prisijungimo klaida:<br>Xbox Live nepasiekiamas"
+xblBannedDesc = "Tavo Microsoft paskyra yra iš šalies, kurioje Xbox Live nepasiekiamas."
+under18Title = "Prisijungimo klaida:<br>reikia tėvų leidimo"
+under18Desc = "Jaunesnių nei 18 metų vartotojų paskyras į šeimą turi pridėti suaugęs asmuo."
+unknownTitle = "Nežinoma prisijungimo klaida"
+unknownDesc = "Įvyko nežinoma klaida. Daugiau informacijos konsolėje."
+
+[js.auth.offline.error]
+invalidUsernameTitle = "Netinkamas vardas"
+invalidUsernameDesc = "Vardas turi būti 3-16 simbolių ilgio ir sudarytas tik iš raidžių, skaičių ir _."
+
+[js.auth.mojang.error]
+methodNotAllowedTitle = "Vidinė klaida:<br>metodas neleidžiamas"
+methodNotAllowedDesc = "Metodas neleidžiamas. Praneškite apie šią klaidą."
+notFoundTitle = "Vidinė klaida:<br>nerasta"
+notFoundDesc = "Prisijungimo adresas nerastas. Praneškite apie šią klaidą."
+accountMigratedTitle = "Prisijungimo klaida:<br>paskyra perkelta"
+accountMigratedDesc = "Ši paskyra perkelta. Kaip vardą naudok paskyros el. paštą."
+invalidCredentialsTitle = "Prisijungimo klaida:<br>neteisingi duomenys"
+invalidCredentialsDesc = "Neteisingas el. paštas arba slaptažodis. Bandyk dar kartą."
+tooManyAttemptsTitle = "Prisijungimo klaida:<br>per daug bandymų"
+tooManyAttemptsDesc = "Pastaruoju metu buvo per daug bandymų prisijungti. Pabandyk vėliau."
+invalidTokenTitle = "Prisijungimo klaida:<br>netinkamas raktas"
+invalidTokenDesc = "Pateiktas prieigos raktas netinkamas."
+tokenHasProfileTitle = "Prisijungimo klaida:<br>raktas jau turi profilį"
+tokenHasProfileDesc = "Prieigos raktui jau priskirtas profilis."
+credentialsMissingTitle = "Prisijungimo klaida:<br>trūksta duomenų"
+credentialsMissingDesc = "Neįvestas vardas arba slaptažodis, arba slaptažodis trumpesnis nei 3 simboliai."
+invalidSaltVersionTitle = "Prisijungimo klaida:<br>netinkama salt versija"
+invalidSaltVersionDesc = "Netinkama salt versija."
+unsupportedMediaTypeTitle = "Vidinė klaida:<br>nepalaikomas formatas"
+unsupportedMediaTypeDesc = "Nepalaikomas formatas. Praneškite apie šią klaidą."
+accountGoneTitle = "Prisijungimo klaida:<br>paskyra perkelta"
+accountGoneDesc = "Paskyra perkelta į Microsoft. Prisijunk su Microsoft."
+unreachableTitle = "Prisijungimo klaida:<br>serveriai nepasiekiami"
+unreachableDesc = "Nepavyko pasiekti prisijungimo serverių. Patikrink interneto ryšį."
+gameNotPurchasedTitle = "Prisijungimo klaida:<br>žaidimas nenupirktas"
+gameNotPurchasedDesc = "Ši paskyra nėra įsigijusi Minecraft. Jį gali nusipirkti <a href=\"https://minecraft.net/\">Minecraft.net</a> svetainėje."
+unknownErrorTitle = "Nežinoma prisijungimo klaida"
+unknownErrorDesc = "Įvyko nežinoma klaida. Daugiau informacijos konsolėje."

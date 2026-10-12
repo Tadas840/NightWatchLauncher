@@ -1,0 +1,48 @@
+plugins {
+	id 'java'
+}
+
+group = 'lt.nightwatch'
+version = '1.0.0'
+
+repositories {
+	mavenCentral()
+	maven { url = 'https://repo.papermc.io/repository/maven-public/' }
+	maven { url = 'https://repo.codemc.io/repository/maven-public/' }
+}
+
+dependencies {
+	compileOnly 'io.papermc.paper:paper-api:1.21.11-R0.1-SNAPSHOT'
+	compileOnly 'net.luckperms:api:5.4'
+	compileOnly('fr.xephi:authme:5.6.0') { transitive = false }
+}
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	options.encoding = 'UTF-8'
+	options.release = 21
+}
+
+processResources {
+	def version = project.version
+	inputs.property 'version', version
+	filesMatching('plugin.yml') {
+		expand 'version': version
+	}
+}
+
+// Copy the plugin into the Minecraft server's plugins folder.
+// Set serverPluginsDir in gradle.properties.
+tasks.register('installToServer', Copy) {
+	dependsOn jar
+	from jar.archiveFile
+	into file(project.property('serverPluginsDir'))
+	rename { 'NightWatchAPI.jar' }
+	// The plugins folder contains files locked by the running server.
+	doNotTrackState('Destination is the live server plugins folder')
+}

@@ -1,0 +1,11 @@
+/node_modules/
+/.vs/
+/.vscode/
+/target/
+/logs/
+/dist/
+# NightWatch client mod build output
+/client-mod/build/
+/client-mod/.gradle/
+/server-plugin/build/
+/server-plugin/.gradle/

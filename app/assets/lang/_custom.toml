@@ -1,0 +1,123 @@
+# Custom Language File for Launcher Customizer
+# NightWatch launcher texts. Edit this file to change the launcher name, links and welcome screen.
+
+[ejs.app]
+title = "NightWatch"
+
+[ejs.landing]
+# Links of the icons in the launcher. Use "#" to disable a link.
+mediaGitHubURL = "#"
+mediaXURL = "#"
+mediaInstagramURL = "#"
+mediaYouTubeURL = "#"
+mediaDiscordURL = "#"
+
+[ejs.settings]
+sourceGithubLink = "#"
+supportLink = "#"
+
+[ejs.welcome]
+welcomeHeader = "SVEIKI ATVYKĘ Į NIGHTWATCH"
+welcomeDescription = "NightWatch – Minecraft 1.21.11 serveris. Prisijunk su savo serverio vardu ir slaptažodžiu ir spausk ŽAISTI – launcheris pats parsiųs žaidimą, modus ir prijungs tave prie serverio."
+welcomeDescCTA = "Iki žaidimo liko vos keli paspaudimai."
+continueButton = "TĘSTI"
+
+[ejs.login]
+loginCancelText = "Atšaukti"
+loginSubheader = "PRISIJUNGIMAS"
+loginEmailError = "* Netinkamas vardas"
+loginEmailPlaceholder = "VARTOTOJO VARDAS"
+loginPasswordError = "* Privaloma"
+loginPasswordPlaceholder = "SLAPTAŽODIS"
+loginPasswordRepeatError = "* Slaptažodžiai nesutampa"
+loginPasswordRepeatPlaceholder = "PAKARTOK SLAPTAŽODĮ"
+loginNeedAccountText = "Neturi paskyros? Registruokis"
+loginOfflineDisclaimer = "Naudok tą patį vardą ir slaptažodį kaip serveryje (/login)."
+loginPasswordDisclaimer2 = "{appName} nėra susijęs su Mojang AB."
+
+[ejs.loginOptions]
+loginButton = "PRISIJUNGTI"
+cancelButton = "Atšaukti"
+
+[js.login]
+login = "PRISIJUNGTI"
+loggingIn = "JUNGIAMASI"
+success = "PAVYKO"
+tryAgain = "Bandyti dar kartą"
+loginHeader = "PRISIJUNGIMAS"
+registerHeader = "REGISTRACIJA"
+needAccount = "Neturi paskyros? Registruokis"
+haveAccount = "Jau turi paskyrą? Prisijunk"
+
+[js.login.error]
+invalidValue = "* Netinkamas vardas"
+requiredValue = "* Privaloma"
+passwordMismatch = "* Slaptažodžiai nesutampa"
+
+[js.auth.offline.error]
+invalidUsernameTitle = "Netinkamas vardas"
+invalidUsernameDesc = "Vardas turi būti 3-16 simbolių ilgio ir sudarytas tik iš raidžių, skaičių ir _."
+
+# Errors from the server login (NightWatchAPI + AuthMe).
+[js.auth.offline.error.invalid_username]
+title = "Netinkamas vardas"
+desc = "Vardas turi būti 3-16 simbolių ilgio ir sudarytas tik iš raidžių, skaičių ir _."
+
+[js.auth.offline.error.password_required]
+title = "Įvesk slaptažodį"
+desc = "Slaptažodis yra privalomas."
+
+[js.auth.offline.error.not_registered]
+title = "Paskyra nerasta"
+desc = "Tokio žaidėjo serveryje nėra. Spausk „Neturi paskyros? Registruokis“."
+
+[js.auth.offline.error.wrong_password]
+title = "Neteisingas slaptažodis"
+desc = "Naudok tą patį slaptažodį, kurį naudoji serveryje su /login."
+
+[js.auth.offline.error.already_registered]
+title = "Vardas užimtas"
+desc = "Šis vardas jau užregistruotas. Prisijunk arba pasirink kitą vardą."
+
+[js.auth.offline.error.password_length]
+title = "Netinkamas slaptažodis"
+desc = "Slaptažodis turi būti nuo {min} iki {max} simbolių."
+
+[js.auth.offline.error.password_is_username]
+title = "Netinkamas slaptažodis"
+desc = "Slaptažodis negali sutapti su vardu."
+
+[js.auth.offline.error.too_many_attempts]
+title = "Per daug bandymų"
+desc = "Per daug neteisingų bandymų. Pabandyk po 10 minučių."
+
+[js.auth.offline.error.too_many_accounts]
+title = "Per daug paskyrų"
+desc = "Iš šio IP adreso jau užregistruota maksimaliai paskyrų."
+
+[js.auth.offline.error.register_disabled]
+title = "Registracija išjungta"
+desc = "Registracija per launcherį išjungta. Užsiregistruok serveryje."
+
+[js.auth.offline.error.unreachable]
+title = "Serveris nepasiekiamas"
+desc = "Nepavyko susisiekti su serveriu. Patikrink internetą (ir Radmin VPN) arba pabandyk vėliau."
+
+[js.auth.offline.error.unknown]
+title = "Nepavyko prisijungti"
+desc = "Įvyko nežinoma klaida. Pabandyk dar kartą."
+
+[js.landing.serverStatus]
+server = "SERVERIS"
+offline = "OFFLINE"
+players = "ONLINE"
+
+[js.landing.playerStats]
+unavailable = "Statistika šiuo metu nepasiekiama"
+
+[js.uibinder.validateAccount]
+failedMessageTitle = "Reikia prisijungti"
+failedMessage = "<strong>{account}</strong> prisijungimas nebegalioja. Pasirink kitą paskyrą arba prisijunk iš naujo."
+failedMessageSelectAnotherAccount = "<strong>{account}</strong> prisijungimas nebegalioja. Prisijunk su savo serverio vardu ir slaptažodžiu."
+loginButton = "Prisijungti"
+selectAnotherAccountButton = "Kita paskyra"

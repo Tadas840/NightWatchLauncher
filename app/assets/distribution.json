@@ -1,0 +1,168 @@
+{
+    "version": "1.0.0",
+    "rss": "",
+    "servers": [
+        {
+            "id": "nightwatch-1.21.11",
+            "name": "NightWatch",
+            "description": "NightWatch Minecraft serveris",
+            "icon": "assets/images/SealCircle.png",
+            "version": "1.0.0",
+            "address": "26.139.249.47:25565",
+            "statsApi": "https://26.139.249.47:8765",
+            "minecraftVersion": "1.21.11",
+            "javaOptions": {
+                "supported": ">=21",
+                "suggestedMajor": 21
+            },
+            "mainServer": true,
+            "autoconnect": true,
+            "modules": [
+                {
+                    "id": "net.fabricmc:fabric-loader:0.19.5",
+                    "name": "Fabric Loader 0.19.5",
+                    "type": "Fabric",
+                    "artifact": {
+                        "size": 1984980,
+                        "MD5": "23bf6a8c5ba938db7d13959a2630357f",
+                        "url": "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.19.5/fabric-loader-0.19.5.jar"
+                    },
+                    "subModules": [
+                        {
+                            "id": "fabric-loader-0.19.5-1.21.11",
+                            "name": "Fabric Version Manifest fabric-loader-0.19.5-1.21.11",
+                            "type": "VersionManifest",
+                            "artifact": {
+                                "size": 2865,
+                                "MD5": "d54dac704949d0b29e01fbaa2c976079",
+                                "url": "https://meta.fabricmc.net/v2/versions/loader/1.21.11/0.19.5/profile/json"
+                            }
+                        },
+                        {
+                            "id": "org.ow2.asm:asm:9.10.1",
+                            "name": "org.ow2.asm:asm:9.10.1",
+                            "type": "Library",
+                            "artifact": {
+                                "size": 126151,
+                                "MD5": "9cb72080438acf27f2607002e1444a7b",
+                                "url": "https://maven.fabricmc.net/org/ow2/asm/asm/9.10.1/asm-9.10.1.jar"
+                            }
+                        },
+                        {
+                            "id": "org.ow2.asm:asm-analysis:9.10.1",
+                            "name": "org.ow2.asm:asm-analysis:9.10.1",
+                            "type": "Library",
+                            "artifact": {
+                                "size": 35140,
+                                "MD5": "6dd9011ec87f65e4b2e14e938c4118e4",
+                                "url": "https://maven.fabricmc.net/org/ow2/asm/asm-analysis/9.10.1/asm-analysis-9.10.1.jar"
+                            }
+                        },
+                        {
+                            "id": "org.ow2.asm:asm-commons:9.10.1",
+                            "name": "org.ow2.asm:asm-commons:9.10.1",
+                            "type": "Library",
+                            "artifact": {
+                                "size": 74840,
+                                "MD5": "8eee0b1bdd046baf472eb83dd5e6bb44",
+                                "url": "https://maven.fabricmc.net/org/ow2/asm/asm-commons/9.10.1/asm-commons-9.10.1.jar"
+                            }
+                        },
+                        {
+                            "id": "org.ow2.asm:asm-tree:9.10.1",
+                            "name": "org.ow2.asm:asm-tree:9.10.1",
+                            "type": "Library",
+                            "artifact": {
+                                "size": 51958,
+                                "MD5": "62541e1dc62331408ef31317555bf4fa",
+                                "url": "https://maven.fabricmc.net/org/ow2/asm/asm-tree/9.10.1/asm-tree-9.10.1.jar"
+                            }
+                        },
+                        {
+                            "id": "org.ow2.asm:asm-util:9.10.1",
+                            "name": "org.ow2.asm:asm-util:9.10.1",
+                            "type": "Library",
+                            "artifact": {
+                                "size": 95628,
+                                "MD5": "d0892ecb209867805e7d2418e5dc6c42",
+                                "url": "https://maven.fabricmc.net/org/ow2/asm/asm-util/9.10.1/asm-util-9.10.1.jar"
+                            }
+                        },
+                        {
+                            "id": "net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7",
+                            "name": "net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7",
+                            "type": "Library",
+                            "artifact": {
+                                "size": 1539080,
+                                "MD5": "9e33b145b2a46fbc70daf532e3705066",
+                                "url": "https://maven.fabricmc.net/net/fabricmc/sponge-mixin/0.17.4+mixin.0.8.7/sponge-mixin-0.17.4+mixin.0.8.7.jar"
+                            }
+                        },
+                        {
+                            "id": "net.fabricmc:intermediary:1.21.11",
+                            "name": "net.fabricmc:intermediary:1.21.11",
+                            "type": "Library",
+                            "artifact": {
+                                "size": 797685,
+                                "MD5": "54a87ea75e373bc39b2d36df201231ea",
+                                "url": "https://maven.fabricmc.net/net/fabricmc/intermediary/1.21.11/intermediary-1.21.11.jar"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "net.fabricmc.fabric-api:fabric-api:0.141.6+1.21.11",
+                    "name": "Fabric API",
+                    "type": "FabricMod",
+                    "artifact": {
+                        "size": 2426039,
+                        "MD5": "d16a96ba9b0797054a012cfb1f5fd6a8",
+                        "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/6qAuTtLR/fabric-api-0.141.6%2B1.21.11.jar"
+                    }
+                },
+                {
+                    "id": "com.dreamdisplays:dreamdisplays-fabric:1.21.11-1.10.0",
+                    "name": "Dream Displays",
+                    "type": "FabricMod",
+                    "artifact": {
+                        "size": 26704157,
+                        "MD5": "98d82d246190c4a8c02ceba32c6a53af",
+                        "url": "https://cdn.modrinth.com/data/4IIKQyBu/versions/ePF5X0gg/dreamdisplays-fabric-1.21.11-1.10.0.jar"
+                    }
+                },
+                {
+                    "id": "nightwatch-server-resource-pack",
+                    "name": "Server resource pack",
+                    "type": "File",
+                    "artifact": {
+                        "size": 93668198,
+                        "MD5": "00b1068fd8ad3087c453086907935c63",
+                        "url": "https://download.mc-packs.net/pack/3db82614ad3548c2f51c2038b4ddbe52a9d47e5b.zip",
+                        "path": "downloads/e3839591-d493-4483-a5bd-1b487b79e3c2/3db82614ad3548c2f51c2038b4ddbe52a9d47e5b"
+                    }
+                },
+                {
+                    "id": "nightwatch.bundled:nightwatch-client:1.0.0",
+                    "name": "nightwatch-client",
+                    "type": "FabricMod",
+                    "artifact": {
+                        "size": 35684,
+                        "MD5": "da172562dd65fb9ffde4f07fe4896963",
+                        "url": "bundled:mods/nightwatch-client.jar"
+                    }
+                },
+                {
+                    "id": "nightwatch-config-nightwatch-client.json",
+                    "name": "config\\nightwatch\\client.json",
+                    "type": "File",
+                    "artifact": {
+                        "size": 822,
+                        "MD5": "e8d76d28b7b0fd897e0845c1f791d92e",
+                        "url": "bundled:config/nightwatch/client.json",
+                        "path": "config/nightwatch/client.json"
+                    }
+                }
+            ]
+        }
+    ]
+}

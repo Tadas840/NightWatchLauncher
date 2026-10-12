@@ -1,0 +1,12 @@
+name: NightWatchAPI
+version: '${version}'
+main: lt.nightwatch.api.NightWatchApiPlugin
+api-version: '1.21'
+description: Player stats for the NightWatch launcher.
+authors: [NightWatch]
+softdepend: [LuckPerms, ExcellentEconomy, AuthMe]
+commands:
+  nightwatchapi:
+    description: Reload NightWatchAPI config.
+    permission: nightwatchapi.admin
+    usage: /nightwatchapi reload

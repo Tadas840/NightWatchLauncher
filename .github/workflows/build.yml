@@ -1,0 +1,35 @@
+name: Release
+
+# Runs when a version tag is pushed (npm run release creates and pushes it, e.g. v1.0.1).
+# Builds the Windows installer and publishes it as a GitHub release;
+# installed launchers download it automatically.
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: windows-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+
+      - name: Install Dependencies
+        run: npm ci
+        shell: bash
+
+      - name: Build and publish
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx electron-builder build --win --publish always
+        shell: bash

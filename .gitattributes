@@ -1,0 +1,6 @@
+# Files bundled with the launcher are checked by MD5 (distribution.json): never convert line endings.
+app/assets/bundled/** -text
+app/assets/nightwatch-api.pem -text
+nightwatch/client/** -text
+# Gradle wrapper scripts must keep Unix line endings.
+**/gradlew text eol=lf

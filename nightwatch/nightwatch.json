@@ -1,0 +1,25 @@
+{
+    "name": "NightWatch",
+    "description": "NightWatch Minecraft serveris",
+    "serverAddress": "26.139.249.47:25565",
+    "statsApi": "https://26.139.249.47:8765",
+    "autoConnect": true,
+    "minecraftVersion": "1.21.11",
+    "fabricLoaderVersion": "0.19.5",
+    "javaVersion": 21,
+    "serverResourcePack": {
+        "serverProperties": "C:/Users/Tadas/Desktop/Minecraft/Minecraft server/Server Purpur/server.properties"
+    },
+    "mods": [
+        {
+            "name": "Fabric API",
+            "id": "net.fabricmc.fabric-api:fabric-api:0.141.6+1.21.11",
+            "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/6qAuTtLR/fabric-api-0.141.6%2B1.21.11.jar"
+        },
+        {
+            "name": "Dream Displays",
+            "id": "com.dreamdisplays:dreamdisplays-fabric:1.21.11-1.10.0",
+            "url": "https://cdn.modrinth.com/data/4IIKQyBu/versions/ePF5X0gg/dreamdisplays-fabric-1.21.11-1.10.0.jar"
+        }
+    ]
+}

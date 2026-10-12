@@ -1,0 +1,62 @@
+appId: 'nightwatchlauncher'
+productName: 'NightWatch Launcher'
+artifactName: '${productName}-setup-${version}.${ext}'
+
+copyright: 'Copyright © 2026 NightWatch. Based on Helios Launcher by Daniel Scalzi.'
+
+asar: true
+compression: 'maximum'
+
+files:
+  - '!{dist,.gitignore,.vscode,docs,dev-app-update.yml,.nvmrc,eslint.config.mjs}'
+  # NightWatch sources that are not part of the launcher app.
+  - '!{client-mod,server-plugin,nightwatch,scripts}${/*}'
+
+extraResources:
+  - 'libraries'
+
+# Windows Configuration
+win: 
+  target: 
+    - target: 'nsis'
+      arch: 'x64'
+
+# Windows Installer Configuration
+nsis:
+  oneClick: false
+  perMachine: false
+  allowElevation: true
+  allowToChangeInstallationDirectory: true
+
+# macOS Configuration
+mac:
+  target:
+    - target: 'dmg'
+      arch:
+        - 'x64'
+        - 'arm64'
+  artifactName: '${productName}-setup-${version}-${arch}.${ext}'
+  category: 'public.app-category.games'
+
+# Linux Configuration
+linux: 
+  target: 'AppImage'
+  maintainer: 'NightWatch'
+  vendor: 'NightWatch'
+  synopsis: 'Modded Minecraft Launcher'
+  description: 'Custom launcher which allows users to join modded servers. All mods, configurations, and updates are handled automatically.'
+  category: 'Game'
+
+
+directories:
+  buildResources: 'build'
+  output: 'dist'
+
+# Auto updates: releases are published to this GitHub repository and the launcher downloads them from there.
+# The repository must be PUBLIC. Change "owner" to your GitHub user name (and "repo" if needed),
+# then also update "repository" in package.json and dev-app-update.yml.
+publish:
+  provider: 'github'
+  owner: 'Tadas840'
+  repo: 'NightWatchLauncher'
+  releaseType: 'release'
