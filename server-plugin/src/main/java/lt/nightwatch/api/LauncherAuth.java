@@ -99,7 +99,7 @@ public class LauncherAuth {
 
 	public Result logout(String username, String token) {
 		if (username != null && sessions.isValid(username, token)) {
-			sessions.remove(username);
+			sessions.remove(username, token);
 		}
 		return new Result(200, Map.of("ok", true));
 	}

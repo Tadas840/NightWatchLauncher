@@ -15,9 +15,11 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * Launcher sessions. Only a SHA-256 hash of each token is stored (sessions.yml).
+ * A player can be logged in on several computers (up to MAX_SESSIONS_PER_PLAYER).
  */
 public class SessionStore {
 	private static final SecureRandom RANDOM = new SecureRandom();
+	private static final int MAX_SESSIONS_PER_PLAYER = 10;
 
 	private final NightWatchApiPlugin plugin;
 	private final File file;
@@ -36,8 +38,19 @@ public class SessionStore {
 		String token = HexFormat.of().formatHex(bytes);
 		long days = plugin.getConfig().getLong("auth.session-days", 30);
 		String key = key(playerName);
-		data.set(key + ".hash", hash(token));
-		data.set(key + ".expires", System.currentTimeMillis() + TimeUnit.DAYS.toMillis(days));
+		if (data.isString(key + ".hash")) {
+			// Old format (one session per player).
+			data.set(key, null);
+		}
+		removeExpired(key);
+		ConfigurationSection sessions = data.getConfigurationSection(key);
+		if (sessions != null && sessions.getKeys(false).size() >= MAX_SESSIONS_PER_PLAYER) {
+			// Drop the session that expires first (the oldest).
+			sessions.getKeys(false).stream()
+					.min((a, b) -> Long.compare(sessions.getLong(a), sessions.getLong(b)))
+					.ifPresent(oldest -> sessions.set(oldest, null));
+		}
+		data.set(key + "." + hash(token), System.currentTimeMillis() + TimeUnit.DAYS.toMillis(days));
 		save();
 		return token;
 	}
@@ -50,19 +63,36 @@ public class SessionStore {
 		if (section == null) {
 			return false;
 		}
-		if (section.getLong("expires") < System.currentTimeMillis()) {
-			data.set(key(playerName), null);
+		// Keys are SHA-256 hashes of the tokens, so the lookup does not reveal anything about valid tokens.
+		String tokenHash = hash(token);
+		if (!section.isLong(tokenHash) && !section.isInt(tokenHash)) {
+			return false;
+		}
+		if (section.getLong(tokenHash) < System.currentTimeMillis()) {
+			section.set(tokenHash, null);
 			save();
 			return false;
 		}
-		return MessageDigest.isEqual(
-				hash(token).getBytes(StandardCharsets.UTF_8),
-				section.getString("hash", "").getBytes(StandardCharsets.UTF_8));
+		return true;
 	}
 
-	public synchronized void remove(String playerName) {
-		data.set(key(playerName), null);
+	/** Ends one session (launcher logout). */
+	public synchronized void remove(String playerName, String token) {
+		data.set(key(playerName) + "." + hash(token), null);
 		save();
+	}
+
+	private void removeExpired(String key) {
+		ConfigurationSection section = data.getConfigurationSection(key);
+		if (section == null) {
+			return;
+		}
+		long now = System.currentTimeMillis();
+		for (String tokenHash : section.getKeys(false)) {
+			if (section.getLong(tokenHash) < now) {
+				section.set(tokenHash, null);
+			}
+		}
 	}
 
 	private static String key(String playerName) {
