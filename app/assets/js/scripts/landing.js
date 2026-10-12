@@ -111,6 +111,10 @@ function setGameRunning(running){
     button.toggleAttribute('running', running)
 }
 
+// True while a launch is being prepared, so a double click does not start a second launch
+// (two launches at once make the file check fail while the first game is starting).
+let launching = false
+
 // Bind launch button
 document.getElementById('launch_button').addEventListener('click', async e => {
     if(proc != null){
@@ -119,6 +123,10 @@ document.getElementById('launch_button').addEventListener('click', async e => {
         proc.kill()
         return
     }
+    if(launching){
+        return
+    }
+    launching = true
     loggerLanding.info('Launching game..')
     try {
         const server = (await DistroAPI.getDistribution()).getServerById(ConfigManager.getSelectedServer())
@@ -143,6 +151,8 @@ document.getElementById('launch_button').addEventListener('click', async e => {
     } catch(err) {
         loggerLanding.error('Unhandled error in during launch process.', err)
         showLaunchFailure(Lang.queryJS('landing.launch.failureTitle'), Lang.queryJS('landing.launch.failureText'))
+    } finally {
+        launching = false
     }
 })
 
