@@ -486,13 +486,11 @@ body, button {
 
 /* Logo on login form. */
 #loginImageSeal {
-    border-radius: 50%;
-    border: 2px solid #cad7e1;
-    background: rgba(1, 2, 1, 0.5);
-    height: 125px;
-    width: 125px;
-    box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
-    margin-bottom: 20px;
+    width: 340px;
+    height: auto;
+    filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.8));
+    margin-bottom: 10px;
+    user-select: none;
 }
 
 /* Header on login view. */
@@ -3469,6 +3467,15 @@ input:checked + .toggleSwitchSlider:before {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+/* NightWatch logo above the launch button. */
+#launch_logo {
+    width: 420px;
+    height: auto;
+    margin: 0px 0px 18px -20px;
+    filter: drop-shadow(0px 0px 14px rgba(0, 0, 0, 0.8));
+    user-select: none;
+    pointer-events: none;
 }
 #launch_area #launch_content .bot_divider {
     display: none;
