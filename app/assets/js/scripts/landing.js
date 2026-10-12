@@ -241,7 +241,7 @@ async function refreshPlayerStats() {
 
     let data = null
     try {
-        const res = await NightWatchAPI.request(`/player/${encodeURIComponent(account.uuid)}`, { timeout: 5000 })
+        const res = await NightWatchAPI.request(`/player/${encodeURIComponent(account.uuid)}`, { timeout: 10000 })
         if(res?.status === 200) {
             data = res.data
         }
@@ -983,7 +983,7 @@ function displayArticle(articleObject, index){
  */
 async function loadNightWatchNews(){
     try {
-        const res = await NightWatchAPI.request('/news', { timeout: 5000 })
+        const res = await NightWatchAPI.request('/news', { timeout: 10000 })
         if(res?.status !== 200 || !Array.isArray(res.data.articles)) {
             return { articles: null }
         }
