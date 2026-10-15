@@ -1,5 +1,5 @@
 appId: 'nightwatchlauncher'
-productName: 'NightWatch Launcher'
+productName: 'McRuna Launcher'
 artifactName: '${productName}-setup-${version}.${ext}'
 
 copyright: 'Copyright © 2026 NightWatch. Based on Helios Launcher by Daniel Scalzi.'

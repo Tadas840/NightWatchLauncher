@@ -2,7 +2,7 @@
 # NightWatch launcher texts. Edit this file to change the launcher name, links and welcome screen.
 
 [ejs.app]
-title = "NightWatch"
+title = "McRuna Launcher"
 
 [ejs.landing]
 # Links of the icons in the launcher. Use "#" to disable a link.

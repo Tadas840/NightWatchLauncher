@@ -13,6 +13,9 @@ const { pathToFileURL }                 = require('url')
 const { AZURE_CLIENT_ID, MSFT_OPCODE, MSFT_REPLY_TYPE, MSFT_ERROR, SHELL_OPCODE } = require('./app/assets/js/ipcconstants')
 const LangLoader                        = require('./app/assets/js/langloader')
 
+// The launcher was renamed from NightWatch Launcher; keep its settings and saved accounts.
+app.setPath('userData', path.join(app.getPath('appData'), 'NightWatch Launcher'))
+
 // Setup Lang
 LangLoader.setupLanguage()
 
@@ -136,7 +139,7 @@ ipcMain.on(MSFT_OPCODE.OPEN_LOGIN, (ipcEvent, ...arguments_) => {
         width: 520,
         height: 600,
         frame: true,
-        icon: getPlatformIcon('SealCircle')
+        icon: getPlatformIcon('McRunaIcon')
     })
 
     msftAuthWindow.on('closed', () => {
@@ -187,7 +190,7 @@ ipcMain.on(MSFT_OPCODE.OPEN_LOGOUT, (ipcEvent, uuid, isLastAccount) => {
         width: 520,
         height: 600,
         frame: true,
-        icon: getPlatformIcon('SealCircle')
+        icon: getPlatformIcon('McRunaIcon')
     })
 
     msftLogoutWindow.on('closed', () => {
@@ -233,7 +236,7 @@ function createWindow() {
     win = new BrowserWindow({
         width: 980,
         height: 552,
-        icon: getPlatformIcon('SealCircle'),
+        icon: getPlatformIcon('McRunaIcon'),
         frame: false,
         webPreferences: {
             preload: path.join(__dirname, 'app', 'assets', 'js', 'preloader.js'),
